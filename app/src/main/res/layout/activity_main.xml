@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context=".MainActivity">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/setting_background"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:src="@android:drawable/screen_background_light"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintEnd_toStartOf="@+id/logo_description"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circleShape" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/setting_description"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/settings_description"
+            android:src="@drawable/ic_baseline_settings_24"
+            app:layout_constraintBottom_toBottomOf="@+id/setting_background"
+            app:layout_constraintEnd_toEndOf="@+id/setting_background"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/setting_background"
+            app:layout_constraintTop_toTopOf="@+id/setting_background" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/search_background"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/search_description"
+            android:src="@android:drawable/screen_background_light"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/logo_description"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circleShape"
+            tools:ignore="ImageContrastCheck" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/search_description"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/search_description"
+            android:src="@drawable/ic_baseline_search_24"
+            app:layout_constraintBottom_toBottomOf="@+id/search_background"
+            app:layout_constraintEnd_toEndOf="@+id/search_background"
+            app:layout_constraintStart_toStartOf="@+id/search_background"
+            app:layout_constraintTop_toTopOf="@+id/search_background"
+            app:shapeAppearanceOverlay="@style/circleShape"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/logo_description"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:contentDescription="@string/logo_description"
+            android:src="@drawable/treender_logo"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintEnd_toStartOf="@+id/search_background"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/setting_background"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_description" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/tree_picture"
+            android:layout_width="350dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/hosler_tree"
+            app:layout_constraintDimensionRatio="h,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            app:shapeAppearanceOverlay="@style/roundedShape" />
+
+        <TextView
+            android:id="@+id/tree_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/tree_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            app:layout_constraintStart_toStartOf="@+id/tree_picture"
+            app:layout_constraintTop_toBottomOf="@+id/tree_picture" />
+
+        <TextView
+            android:id="@+id/tree_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/tree_id"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintBottom_toBottomOf="@+id/tree_name"
+            app:layout_constraintStart_toEndOf="@+id/tree_name"
+            app:layout_constraintTop_toBottomOf="@+id/tree_picture"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/tree_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tree_location"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintStart_toStartOf="@+id/tree_name"
+            app:layout_constraintTop_toBottomOf="@+id/tree_name"
+            tools:ignore="TextContrastCheck" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/electric_background"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/search_description"
+            android:src="@android:drawable/screen_background_light"
+            app:layout_constraintBottom_toBottomOf="@+id/nope_background"
+            app:layout_constraintEnd_toStartOf="@+id/like_background"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/nope_background"
+            app:layout_constraintTop_toTopOf="@+id/nope_background"
+            app:shapeAppearanceOverlay="@style/circleShape"
+            tools:ignore="ImageContrastCheck" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/rewind_background"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="30dp"
+            android:contentDescription="@string/search_description"
+            android:src="@android:drawable/screen_background_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/nope_background"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shapeAppearanceOverlay="@style/circleShape"
+            tools:ignore="ImageContrastCheck" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/nope_background"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@android:drawable/screen_background_light"
+            app:layout_constraintBottom_toBottomOf="@+id/rewind_background"
+            app:layout_constraintEnd_toStartOf="@+id/electric_background"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/rewind_background"
+            app:layout_constraintTop_toTopOf="@+id/rewind_background"
+            app:shapeAppearanceOverlay="@style/circleShape" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/like_background"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@android:drawable/screen_background_light"
+            app:layout_constraintBottom_toBottomOf="@+id/electric_background"
+            app:layout_constraintEnd_toStartOf="@+id/superlike_background"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/electric_background"
+            app:layout_constraintTop_toTopOf="@+id/electric_background"
+            app:shapeAppearanceOverlay="@style/circleShape" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/superlike_background"
+            android:layout_width="42dp"
+            android:layout_height="41dp"
+            android:contentDescription="@string/search_description"
+            android:src="@android:drawable/screen_background_light"
+            app:layout_constraintBottom_toBottomOf="@+id/like_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/like_background"
+            app:layout_constraintTop_toTopOf="@+id/like_background"
+            app:layout_constraintVertical_bias="0.517"
+            app:shapeAppearanceOverlay="@style/circleShape"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/rewind_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/rewind_treender"
+            app:layout_constraintBottom_toBottomOf="@+id/rewind_background"
+            app:layout_constraintEnd_toEndOf="@+id/rewind_background"
+            app:layout_constraintStart_toStartOf="@+id/rewind_background"
+            app:layout_constraintTop_toTopOf="@+id/rewind_background" />
+
+        <ImageView
+            android:id="@+id/superlike_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/super_like_treender"
+            app:layout_constraintBottom_toBottomOf="@+id/superlike_background"
+            app:layout_constraintEnd_toEndOf="@+id/superlike_background"
+            app:layout_constraintStart_toStartOf="@+id/superlike_background"
+            app:layout_constraintTop_toTopOf="@+id/superlike_background"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/like_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/like_treender"
+            app:layout_constraintBottom_toBottomOf="@+id/like_background"
+            app:layout_constraintEnd_toEndOf="@+id/like_background"
+            app:layout_constraintStart_toStartOf="@+id/like_background"
+            app:layout_constraintTop_toTopOf="@+id/like_background"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/nope_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/nope_treender"
+            app:layout_constraintBottom_toBottomOf="@+id/nope_background"
+            app:layout_constraintEnd_toEndOf="@+id/nope_background"
+            app:layout_constraintStart_toStartOf="@+id/nope_background"
+            app:layout_constraintTop_toTopOf="@+id/nope_background"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/electric_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/boost_treender"
+            app:layout_constraintBottom_toBottomOf="@+id/electric_background"
+            app:layout_constraintEnd_toEndOf="@+id/electric_background"
+            app:layout_constraintStart_toStartOf="@+id/electric_background"
+            app:layout_constraintTop_toTopOf="@+id/electric_background" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="rewind_background,rewind_logo"
+            app:layout_constraintEnd_toStartOf="@+id/group9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="like_background,like_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/group8"
+            app:layout_constraintEnd_toStartOf="@+id/group10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/group8"
+            app:layout_constraintTop_toTopOf="@+id/group8" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="superlike_background,superlike_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/group9"
+            app:layout_constraintEnd_toStartOf="@+id/group11"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/group9"
+            app:layout_constraintTop_toTopOf="@+id/group9" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="nope_background,nope_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/group10"
+            app:layout_constraintEnd_toStartOf="@+id/group13"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/group10"
+            app:layout_constraintTop_toTopOf="@+id/group10" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="electric_background,electric_logo"
+            app:layout_constraintBottom_toBottomOf="@+id/group11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/group11"
+            app:layout_constraintTop_toTopOf="@+id/group11" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
